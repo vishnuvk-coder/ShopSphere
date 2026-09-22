@@ -39,8 +39,8 @@ function Admin() {
 
       const [productsResponse, ordersResponse] =
         await Promise.all([
-          axios.get("http://localhost:5000/api/products"),
-          axios.get("http://localhost:5000/api/orders")
+          axios.get("https://shopsphere-zys1.onrender.com/api/products"),
+          axios.get("https://shopsphere-zys1.onrender.com/api/orders")
         ]);
 
       setProducts(productsResponse.data);
@@ -148,7 +148,7 @@ function Admin() {
       // UPDATE
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/products/${editingId}`,
+          `https://shopsphere-zys1.onrender.com/api/products/${editingId}`,
           productData
         );
 
@@ -158,7 +158,7 @@ function Admin() {
       // ADD
       else {
         await axios.post(
-          "http://localhost:5000/api/products",
+          "https://shopsphere-zys1.onrender.com/api/products",
           productData
         );
 
@@ -202,7 +202,7 @@ function Admin() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`
+        `https://shopsphere-zys1.onrender.com/api/products/${id}`
       );
 
       alert("Product deleted successfully!");

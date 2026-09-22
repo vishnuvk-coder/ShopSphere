@@ -11,7 +11,7 @@ function ProductDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://shopsphere-zys1.onrender.com/api/products/${id}`)
       .then((response) => {
         setProduct(response.data);
         setLoading(false);

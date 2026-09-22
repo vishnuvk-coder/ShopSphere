@@ -74,7 +74,7 @@ function Cart() {
       }));
 
       const response = await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://shopsphere-zys1.onrender.com/api/orders",
         {
           items: orderItems,
           totalAmount: total

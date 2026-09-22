@@ -9,7 +9,7 @@ function Products() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://shopsphere-zys1.onrender.com/api/products")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
